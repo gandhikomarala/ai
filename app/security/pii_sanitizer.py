@@ -7,7 +7,7 @@ class PIISanitizer:
         "PHONE": r"\b(?:\+?1[-.]?)?\(?[2-9]\d{2}\)?[-.]?\d{3}[-.]?\d{4}\b",
         "SSN": r"\b\d{3}-\d{2}-\d{4}\b",
         "CREDIT_CARD": r"\b(?:\d{4}[-\s]?){3}\d{4}\b",
-        "AWS_KEY": r"\b(AKIA|ASIA)[0-9A-Z]{16}\b",
+        "AWS_KEY": r"\b(AKIA|ASIA)[0-9A-Z]{12,24}\b",
         "GITHUB_TOKEN": r"\b(ghp|gho|ghu|ghs|ghr)_[a-zA-Z0-9]{36}\b",
         "JWT_TOKEN": r"\beyJ[a-zA-Z0-9_-]{10,}\.[a-zA-Z0-9_-]{10,}\.[a-zA-Z0-9_-]{10,}\b",
         "API_KEY": r"(?i)(api_key|secret_key|password)\s*[:=]\s*['\"][a-zA-Z0-9_\-+=/]{16,}['\"]"
