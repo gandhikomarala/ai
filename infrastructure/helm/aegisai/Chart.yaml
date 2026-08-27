@@ -1,0 +1,9 @@
+apiVersion: v2
+name: aegisai
+description: Enterprise AI Knowledge & Incident Copilot Helm Chart
+type: application
+version: 1.0.0
+appVersion: "1.0.0"
+maintainers:
+  - name: AegisAI DevOps
+    email: devops@aegisai.internal

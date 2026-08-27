@@ -1,0 +1,50 @@
+# Kubernetes Microservice Workload Specification 007
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: novastack-worker-007
+  namespace: aegisai-production
+  labels:
+    app.kubernetes.io/name: worker-007
+    app.kubernetes.io/part-of: novastack
+    tier: backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: worker-007
+  template:
+    metadata:
+      labels:
+        app: worker-007
+    spec:
+      containers:
+      - name: worker
+        image: 123456789012.dkr.ecr.us-east-1.amazonaws.com/novastack/worker:007
+        resources:
+          limits:
+            cpu: "1000m"
+            memory: "1024Mi"
+          requests:
+            cpu: "250m"
+            memory: "256Mi"
+        env:
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
+        ports:
+        - containerPort: 8080
+          name: http
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: novastack-worker-svc-007
+  namespace: aegisai-production
+spec:
+  selector:
+    app: worker-007
+  ports:
+  - port: 80
+    targetPort: 8080

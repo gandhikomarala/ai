@@ -1,0 +1,302 @@
+[
+  {
+    "id": "q_1",
+    "question": "What is our authentication architecture?",
+    "category": "architecture",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_2",
+    "question": "Where is JWT validation implemented?",
+    "category": "code",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_3",
+    "question": "What changed in the last payment release?",
+    "category": "git",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_4",
+    "question": "Why did INC-2841 happen in payment service?",
+    "category": "incident",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q_5",
+    "question": "Which services depend on payment-service?",
+    "category": "architecture",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_6",
+    "question": "How many payment failures happened yesterday?",
+    "category": "sql",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_7",
+    "question": "Which deployment introduced the database drift error?",
+    "category": "incident",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q_8",
+    "question": "Show me the code responsible for token validation.",
+    "category": "code",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_9",
+    "question": "What database tables are used by payment-service?",
+    "category": "architecture",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_10",
+    "question": "Which incidents are related to authentication?",
+    "category": "incident",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_11",
+    "question": "What are the most common production failures?",
+    "category": "incident",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_12",
+    "question": "What changed between release 2.7 and 2.8 in payment-service?",
+    "category": "git",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q_13",
+    "question": "How does order-service communicate with payment-service?",
+    "category": "architecture",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_14",
+    "question": "Show the SQL query to inspect top 10 highest value orders.",
+    "category": "sql",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_15",
+    "question": "Where are Stripe webhook callbacks handled?",
+    "category": "code",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_16",
+    "question": "What is the rollback procedure for payment-service?",
+    "category": "runbook",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_17",
+    "question": "Explain the blast radius of payment-service outage.",
+    "category": "incident",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q_18",
+    "question": "What password hashing algorithms are supported?",
+    "category": "security",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_19",
+    "question": "How does the prompt injection firewall work?",
+    "category": "security",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_20",
+    "question": "List all microservices owned by the Billing team.",
+    "category": "architecture",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_21",
+    "question": "What is the replication strategy for payments_db?",
+    "category": "database",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_22",
+    "question": "Show the Terraform configuration for Redis cluster.",
+    "category": "infrastructure",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_23",
+    "question": "Explain the RAG evaluation metrics used by CI quality gates.",
+    "category": "evaluation",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q_24",
+    "question": "Where is Celery task queue configured for document ingestion?",
+    "category": "code",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_25",
+    "question": "Show error logs from payment-service between 08:00 and 08:30.",
+    "category": "logs",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_26",
+    "question": "What is the P95 latency target for AI copilot queries?",
+    "category": "observability",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_27",
+    "question": "How does hybrid retrieval fuse dense vector and BM25 results?",
+    "category": "rag",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q_28",
+    "question": "Which commit author introduced PR #42?",
+    "category": "git",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_29",
+    "question": "What are the required HTTP headers for API authentication?",
+    "category": "api",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_30",
+    "question": "Show the database schema for users and organization_members.",
+    "category": "database",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_31",
+    "question": "How is multi-tenant Row-Level Security enforced?",
+    "category": "security",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q_32",
+    "question": "What are the 6 hierarchical RBAC roles in AegisAI?",
+    "category": "security",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_33",
+    "question": "Explain the difference between parent-child and semantic chunking.",
+    "category": "rag",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_34",
+    "question": "Show the Dockerfile configuration for production backend.",
+    "category": "docker",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_35",
+    "question": "What happens when an LLM generates a DROP TABLE query?",
+    "category": "security",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_36",
+    "question": "How does OpenTelemetry trace distributed requests across agents?",
+    "category": "observability",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_37",
+    "question": "What Prometheus metrics track accumulated LLM token costs?",
+    "category": "observability",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_38",
+    "question": "Where is the user session cache stored?",
+    "category": "architecture",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_39",
+    "question": "Explain the recovery timeline for incident INC-2841.",
+    "category": "incident",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q_40",
+    "question": "What microservice emits events to notification-service?",
+    "category": "architecture",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_41",
+    "question": "Show the AST parsing logic for Python functions and classes.",
+    "category": "code",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q_42",
+    "question": "How does citation verification prevent hallucinations?",
+    "category": "rag",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q_43",
+    "question": "What S3 bucket stores original uploaded documents?",
+    "category": "infrastructure",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_44",
+    "question": "List all API endpoints under /api/v1/incidents.",
+    "category": "api",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_45",
+    "question": "What model router is used for high-complexity incident RCA?",
+    "category": "ai",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_46",
+    "question": "How is document SHA-256 deduplication performed?",
+    "category": "ingestion",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_47",
+    "question": "Show the Jenkinsfile stage that enforces RAG quality gates.",
+    "category": "cicd",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_48",
+    "question": "What is the primary vector database used by AegisAI?",
+    "category": "database",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q_49",
+    "question": "How does Langfuse track prompt versions and latency?",
+    "category": "observability",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q_50",
+    "question": "What is the command to run unit and integration tests?",
+    "category": "development",
+    "difficulty": "easy"
+  }
+]
