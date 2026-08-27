@@ -18,7 +18,7 @@ def test_prompt_firewall_allows_safe_query():
     assert is_safe
 
 def test_pii_sanitizer_redacts_credentials():
-    text = "User email is dev@novastack.io and aws key is AKIA1234567890123456"
+    text = "User email is dev@novastack.io and aws key is AKIADUMMYTESTKEY01"
     sanitized = pii_sanitizer.sanitize(text)
     assert "[REDACTED_EMAIL]" in sanitized
     assert "[REDACTED_AWS_KEY]" in sanitized
