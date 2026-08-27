@@ -34,7 +34,7 @@ pip install -r requirements.txt
 cd frontend && npm install && cd ..
 
 # 5. Configure environment variables
-cp .env.example .env
+cp example.env .env
 ```
 
 ---
@@ -118,4 +118,4 @@ python -m app.evaluation.runner
 
 ## License
 
-Licensed under the Apache License, Version 2.0. See [LICENSE](LICENSE) for details.
+Proprietary and Confidential. Copyright (c) 2026 AegisAI Platform Engineering.
