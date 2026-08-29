@@ -118,4 +118,4 @@ python -m app.evaluation.runner
 
 ## License
 
-Proprietary and Confidential. Copyright (c) 2026 AegisAI Platform Engineering.
+Proprietary and Confidential. Proprietary License - Gandhi Komarala. All Rights Reserved.
