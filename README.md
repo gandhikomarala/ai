@@ -17,7 +17,7 @@ AegisAI Gateway — Multi-Model LLM Developer Workbench is a production-grade en
 
 ### 1. Set Up Python Virtual Environment
 ```bash
-git clone gandhikomarala/ai.git
+git clone git@github.com:gandhikomarala/ai.git
 cd ai
 python -m venv venv
 # Windows:
