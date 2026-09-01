@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AegisAI — LLM Gateway & Interactive Playground</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background: #0b0f19; color: #f8fafc; min-height: 100vh; display: flex; flex-direction: column; }
+    header { background: #111827; border-bottom: 1px solid #1f2937; padding: 18px 32px; display: flex; justify-content: space-between; align-items: center; }
+    .brand { font-size: 22px; font-weight: 900; color: #8b5cf6; }
+    main { flex: 1; max-width: 1400px; margin: 0 auto; width: 100%; padding: 32px; display: grid; grid-template-columns: 360px 1fr; gap: 32px; }
+    .card { background: #111827; border: 1px solid #1f2937; border-radius: 18px; padding: 24px; }
+    .field { margin-bottom: 16px; }
+    label { font-size: 13px; font-weight: 700; color: #94a3b8; display: block; margin-bottom: 6px; }
+    select, input[type=range] { width: 100%; background: #030712; border: 1px solid #374151; border-radius: 8px; padding: 10px; color: #f8fafc; }
+    textarea { width: 100%; height: 120px; background: #030712; border: 1px solid #374151; border-radius: 8px; color: #f8fafc; padding: 12px; font-size: 14px; resize: none; }
+    .btn-gen { width: 100%; background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%); color: #fff; border: none; padding: 14px; border-radius: 10px; font-weight: 900; cursor: pointer; margin-top: 10px; }
+    .output-box { background: #030712; border: 1px solid #1f2937; border-radius: 12px; padding: 20px; min-height: 280px; font-size: 15px; line-height: 1.6; color: #cbd5e1; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">⚡ AEGIS AI — LLM INFERENCE GATEWAY</div>
+    <div style="color:#34d399; font-size:13px; font-weight:700;">● Active Providers: OpenAI, Anthropic, Gemini, NVIDIA NIM</div>
+  </header>
+  <main>
+    <div class="card">
+      <h3 style="margin-bottom:16px;">Model Inference Parameters</h3>
+      <div class="field">
+        <label>Selected LLM Model</label>
+        <select id="model-select">
+          <option>Claude-3.5-Sonnet</option>
+          <option>GPT-4o-Turbo</option>
+          <option>Gemini-1.5-Pro</option>
+          <option>Meta-Llama-3.1-70B</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Temperature (<span id="temp-val">0.7</span>)</label>
+        <input type="range" min="0" max="1" step="0.05" value="0.7" oninput="document.getElementById('temp-val').innerText=this.value">
+      </div>
+      <div class="field">
+        <label>System Prompt</label>
+        <textarea id="sys-prompt">You are an expert technical architect and principal software engineer.</textarea>
+      </div>
+      <button class="btn-gen" onclick="generate()">Run Inference Stream</button>
+    </div>
+    <div class="card" style="display:flex; flex-direction:column;">
+      <h3 style="margin-bottom:12px;">Streaming Completion Output</h3>
+      <div class="output-box" id="out-text">
+        Ready for prompt execution. Select parameters on the left and click 'Run Inference Stream'.
+      </div>
+    </div>
+  </main>
+  <script>
+    function generate() {
+      const out = document.getElementById('out-text');
+      const model = document.getElementById('model-select').value;
+      out.innerHTML = `<em>Connecting to ${model} gateway endpoint...</em><br><br>`;
+      setTimeout(() => {
+        out.innerHTML = `<strong>Response from ${model}:</strong><br><br>
+        Architecture validated successfully. The system leverages an event-driven microservices pattern with asynchronous Redis task queues and distributed PostgreSQL persistence. Latency is optimal at 24ms per token.`;
+      }, 600);
+    }
+  </script>
+</body>
+</html>
